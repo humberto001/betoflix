@@ -3,14 +3,15 @@
         {
             "id":1,
             "name": "roi! Letícia né?",
-            "description": "LZ Mario, o Sedutor",
-            "color": "#cbd1ff"
+            "color": "#cbd1ff",
+            "description": "LZ Mario, o Sedutor"
+            
         },
         {
             "id":2,
             "name": "roi! Vamos tomar um café",
-            "description": "LZ Mario, o Sedutor II",
-            "color": "#cbd1ff"
+            "color": "#cbd1ff",
+            "description": "LZ Mario, o Sedutor II"
         }
     ]
 }

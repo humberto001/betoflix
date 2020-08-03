@@ -8,7 +8,7 @@ function CadastroCategoria() {
   const [categories, setCategories] = useState([]);
   const categoryStartValues = {
     name: '',
-    color: '',
+    color: '#cbd1ff',
     description: '',
   };
   const [categoryValues, setCategoryValues] = useState(categoryStartValues);
@@ -35,6 +35,7 @@ function CadastroCategoria() {
 
     fetch(URL).then(async (response) => {
       const result = await response.json();
+      console.log(result);
       setCategories([...result]);
     });
   }, []);
@@ -82,19 +83,17 @@ function CadastroCategoria() {
         <Button>
           Cadastrar
         </Button>
+      </form>
 
-        {categories.length === 0 && (
+      {categories.length === 0 && (
         <div>
           Loading...
         </div>
-        )}
-      </form>
+      )}
 
       <ul>
-        {categories.map((category, index) => (
-
-          // eslint-disable-next-line react/no-array-index-key
-          <li key={`${category}${index}`}>
+        {categories.map((category) => (
+          <li key={category.id}>
             {category.name}
           </li>
         ))}
